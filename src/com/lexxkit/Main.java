@@ -61,6 +61,38 @@ public class Main {
             System.out.print(reverseFullName[i]);
         }
 
+        //Task 5
+        System.out.println("\nTask 5. Square matrix with filled diagonals.\n");
+        int[][] matrix = new int[3][3];
+        int matrixFiller = 1;
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (i == j || (i + j == matrix.length - 1)) {
+                    matrix[i][j] = matrixFiller;
+                }
+            }
+        }
+
+        for (int[] row : matrix) {
+            for (int column : row) {
+                System.out.print(column + " ");
+            }
+            System.out.println();
+        }
+
+        //Task 6
+        System.out.println("\nTask 6. Reverse array.\n");
+        int[] initialArr = {5, 4, 3, 2, 1};
+        int[] reversedArr = new int[initialArr.length];
+        System.out.println("Initial array before: " + Arrays.toString(initialArr));
+
+        for (int i = 0; i < initialArr.length ; i++) {
+            reversedArr[initialArr.length - 1 - i] = initialArr[i];
+        }
+        initialArr = reversedArr;
+        System.out.println("Initial array after : " + Arrays.toString(initialArr));
+
     }
 
     public static int[] generateRandomArray() {
